@@ -11,6 +11,8 @@ let sources = import ../../nix/sources.nix; in {
   # per-project flakes sourced with direnv and nix-shell, so this is
   # not a huge list.
   home.packages = [
+    pkgs.bat
+    pkgs.firefox
     pkgs.fzf
     pkgs.git-crypt
     pkgs.htop
@@ -21,6 +23,7 @@ let sources = import ../../nix/sources.nix; in {
     pkgs.tree
     pkgs.watch
     pkgs.zathura
+    pkgs._1password
 
     pkgs.tlaplusToolbox
     pkgs.tetex
@@ -36,7 +39,7 @@ let sources = import ../../nix/sources.nix; in {
     LC_ALL = "en_US.UTF-8";
     EDITOR = "nvim";
     PAGER = "less -FirSwX";
-    MANPAGER = "less -FirSwX";
+    MANPAGER = "sh -c 'col -bx | ${pkgs.bat}/bin/bat -l man -p'";
   };
 
   home.file.".inputrc".source = ./inputrc;
@@ -80,6 +83,7 @@ let sources = import ../../nix/sources.nix; in {
 
   programs.direnv= {
     enable = true;
+
     config = {
       whitelist = {
         prefix= [
@@ -222,10 +226,13 @@ let sources = import ../../nix/sources.nix; in {
     package = pkgs.neovim-nightly;
 
     plugins = with pkgs; [
+      customVim.vim-cue
       customVim.vim-fish
       customVim.vim-fugitive
       customVim.vim-misc
+      customVim.vim-pgsql
       customVim.vim-tla
+      customVim.vim-zig
       customVim.pigeon
       customVim.AfterColors
 

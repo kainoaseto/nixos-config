@@ -179,6 +179,18 @@
         "url": "https://github.com/mitchellh/tree-sitter-proto/archive/42d82fa18f8afe59b5fc0b16c207ee4f84cb185f.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "vim-cue": {
+        "branch": "master",
+        "description": "cuelang/cue syntax highlighting plugin for vim, derived from google/vim-jsonnet",
+        "homepage": null,
+        "owner": "jjo",
+        "repo": "vim-cue",
+        "rev": "bd1a62303d096aa24fe4160a475645087f8770b3",
+        "sha256": "01f89ki0w2j58pfdvb8w0sf1x5nqgqh3bldinifpd4pysnqhniai",
+        "type": "tarball",
+        "url": "https://github.com/jjo/vim-cue/archive/bd1a62303d096aa24fe4160a475645087f8770b3.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "vim-dracula": {
         "branch": "master",
         "description": "🧛🏻‍♂️ Dark theme for Vim",
@@ -221,10 +233,10 @@
         "homepage": null,
         "owner": "mitchellh",
         "repo": "vim-misc",
-        "rev": "03f34fb95a0c1069311917c27c0bff10183861fc",
-        "sha256": "1j7rjq98zq4fxklxqgfc3s0kkn0hnrhpcfj3gykhsyq3v82m99yw",
+        "rev": "0423e44469e3ac4233dfeb7e4183158434c485c0",
+        "sha256": "1k1p9bkfs4akh036glsgx782f1gdwyp96qd04mhnfrg0gggyvi07",
         "type": "tarball",
-        "url": "https://github.com/mitchellh/vim-misc/archive/03f34fb95a0c1069311917c27c0bff10183861fc.tar.gz",
+        "url": "https://github.com/mitchellh/vim-misc/archive/0423e44469e3ac4233dfeb7e4183158434c485c0.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vim-nord": {
@@ -237,6 +249,18 @@
         "sha256": "0zb4a0xmk6q7ha8x0b28xb02vk390aypn82kcqy3ilv1l43pxly0",
         "type": "tarball",
         "url": "https://github.com/crispgm/nord-vim/archive/cc5b0e9f472bdcbdaa701c94302796fb1e64e8d4.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "vim-pgsql": {
+        "branch": "master",
+        "description": "The best PostgreSQL plugin for Vim!",
+        "homepage": null,
+        "owner": "lifepillar",
+        "repo": "pgsql.vim",
+        "rev": "d5ed1475088e85654281902a08637a632ff7409c",
+        "sha256": "18bz65llksdj0yvafnifvs74g0qhar9vg0xx3s46q4iq6zr6cybv",
+        "type": "tarball",
+        "url": "https://github.com/lifepillar/pgsql.vim/archive/d5ed1475088e85654281902a08637a632ff7409c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vim-pigeon": {
@@ -261,6 +285,18 @@
         "sha256": "1bfxnvx3g5679jan7v5prh7zk0f77m81g8c9ngq75nxdn20ihl7l",
         "type": "tarball",
         "url": "https://github.com/hwayne/tla.vim/archive/0d6d453a401542ce1db247c6fd139ac99b8a5add.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "vim-zig": {
+        "branch": "master",
+        "description": "Vim configuration for Zig",
+        "homepage": null,
+        "owner": "ziglang",
+        "repo": "zig.vim",
+        "rev": "045bb41776280df1adaa2d63c7166684bf631a00",
+        "sha256": "1d4l6x9rwfxr9a2yfhq4ywhm72sky35ki0mr3hq7xy6xj5lpwgq7",
+        "type": "tarball",
+        "url": "https://github.com/ziglang/zig.vim/archive/045bb41776280df1adaa2d63c7166684bf631a00.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

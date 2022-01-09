@@ -1,8 +1,8 @@
 { config, pkgs, currentSystem, ... }:
 
 {
-  # We require 5.14 for VMware Fusion on M1.
-  boot.kernelPackages = pkgs.linuxPackages_5_14;
+  # We require 5.14+ for VMware Fusion on M1.
+  boot.kernelPackages = pkgs.linuxPackages_5_15;
 
   # use unstable nix so we can access flakes
   nix = {
@@ -77,11 +77,7 @@
     fontDir.enable = true;
 
     fonts = [
-      (builtins.path {
-        name = "custom-fonts";
-        path = ../secret/fonts;
-        recursive = true;
-      })
+      pkgs.fira-code
     ];
   };
 
@@ -103,10 +99,13 @@
     # my big monitor it doesn't detect the resolution either so we just
     # manualy create the resolution and switch to it with this script.
     # This script could be better but its hopefully temporary so just force it.
-    (writeShellScriptBin "xrandr-big" ''
+    (writeShellScriptBin "xrandr-6k" ''
       xrandr --newmode "6016x3384_60.00"  1768.50  6016 6544 7216 8416  3384 3387 3392 3503 -hsync +vsync
       xrandr --addmode Virtual-1 6016x3384_60.00
       xrandr -s 6016x3384_60.00
+    '')
+    (writeShellScriptBin "xrandr-mbp" ''
+      xrandr -s 2880x1800
     '')
   ];
 
@@ -121,7 +120,7 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
   services.openssh.passwordAuthentication = true;
-  services.openssh.permitRootLogin = "yes";
+  services.openssh.permitRootLogin = "no";
 
   # Disable the firewall since we're in a VM and we want to make it
   # easy to visit stuff in here. We only use NAT networking anyways.
